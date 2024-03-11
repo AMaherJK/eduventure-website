@@ -5,9 +5,80 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@font-face {
+  font-family: inter_eduventure;
+  src: url(./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf);
+} 
+@font-face {
+  font-family: Kufam_eduventure;
+  src: url(./assets/Fonts/Kufam-VariableFont_wght.ttf);
+} 
+.signUpBtn{
+  width:220px;
+  height:90px;
+  color:#000033;
+  background-color:#66CCCC;
+  font-size:30pt;
+  border-radius:20px;
+  text-transform: uppercase;
+  font-family: inter_eduventure;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.2s ease-in;
+}
+.logInBtn{
+  width:220px;
+  height:90px;
+  color:#000033;
+  background-color:#FF3399;
+  font-size:30pt;
+  border-radius:20px;
+  text-transform: uppercase;
+  font-family: inter_eduventure;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.2s ease-in;
+
+}
+.logInBtn:hover{
+    background-color:#ffffff;
+    box-shadow: -5px -5px  #FF3399 inset;
+  }
+.signUpBtn:hover{
+  color:#66CCCC;
+  background-color:#000033;
+  box-shadow: -5px -5px  #66CCCC inset;
+}
+
+.platebox{
+  height: 840px;
+  width: 700px;
+  background-color:#ffffff;
+  border-radius:10px;
+}
+.inputForm{
+  height: 50px;
+  width: 600px;
+  padding: 5px 5px 5px 10px;
+  font-family: inter_eduventure;
+  font-weight: 500;
+  font-size: 18pt;
+  border-radius: 5px;
+  margin-left: 50px;
+  background-color: #ECECEC;
+  color:#000033;
+  border: none;
+  outline: none;
+  box-shadow: none
 }
