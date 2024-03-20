@@ -1,5 +1,6 @@
 import '../index.css';
 import Stage from './SignUpPlateStage'
+import Arrow from '../assets/icons/Arrow.png'
 function SignUpPlate(){
     const head={
         fontFamily:"inter_eduventure",
@@ -17,9 +18,17 @@ function SignUpPlate(){
         marginTop:"-30px"
 
     }
+    const botalt={
+        fontFamily:"inter_eduventure",
+        fontWeight:"800",
+        textTransform:"uppercase",
+        fontSize:"11pt",
+        marginTop:"36px",
+        color:"#000033",
 
+    }
     return(
-    <div className="platebox" style={{marginLeft:"50px"}}>
+    <div className="platebox">
         <div style={{paddingTop:"38px"}}>
             <Stage stage={1}/>
             <div style={{  textAlign:"center", marginTop:"-10px",marginBottom:"50px"}}>
@@ -28,6 +37,10 @@ function SignUpPlate(){
             </div>
         </div>
         <input type="text" placeholder="EMail" className="inputForm"></input>
+        <div style={{textAlign:"center", marginTop:"360px"}}>
+            <button className="proceedbtn"><img src={Arrow} alt={""}/></button>
+            <h4 style={botalt}>already have an account?</h4>
+        </div>
     </div>);
 };
 export default SignUpPlate;

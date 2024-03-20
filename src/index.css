@@ -55,17 +55,35 @@ code {
     background-color:#ffffff;
     box-shadow: -5px -5px  #FF3399 inset;
   }
+  .logInBtn:active:hover{
+    background-color:#ffffff;
+    font-weight: 800;
+    box-shadow: -10px -10px  #FF3399 inset;
+  }
+
 .signUpBtn:hover{
   color:#66CCCC;
   background-color:#000033;
   box-shadow: -5px -5px  #66CCCC inset;
+}
+.signUpBtn:active:hover{
+  color:#66CCCC;
+  background-color:#000033;
+  font-weight: 800;
+  box-shadow: -10px -10px  #66CCCC inset;
 }
 
 .platebox{
   height: 840px;
   width: 700px;
   background-color:#ffffff;
+  background-image:url(./assets/imgs/plateBackground.png) ;
   border-radius:10px;
+  margin-left: 55%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor:default;
 }
 .inputForm{
   height: 50px;
@@ -81,4 +99,41 @@ code {
   border: none;
   outline: none;
   box-shadow: none
+}
+
+.proceedbtn{
+  height: 120px;
+  width: 120px;
+  background-color:#66CCCC;
+  color:#000033;
+  border-radius: 33px;
+  transition: all 0.2s ease-in;
+  border: none;
+  outline: none;
+  box-shadow: none
+
+}
+.proceedbtn:hover{
+  height: 120px;
+  width: 120px;
+  background-color:#ADFFFF;
+  cursor:pointer
+}
+.BigMessageSignStyle{
+  font-family: Kufam_eduventure;
+  font-size: 120pt;
+  text-transform: uppercase;
+  line-height: 85%;
+  color: #ffffff;
+  font-kerning: normal;
+  margin-left: 70px;
+  margin-top: 300px;
+}
+.Maindev{
+  background-color:#FF3399;
+  background-image:url(assets/Vector\ 1.svg) ;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
