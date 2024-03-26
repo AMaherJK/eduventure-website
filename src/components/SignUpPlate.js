@@ -1,6 +1,6 @@
+import { useState } from 'react';
 import '../index.css';
 import Stage from './SignUpPlateStage'
-import Arrow from '../assets/icons/Arrow.png'
 function SignUpPlate(){
     const head={
         fontFamily:"inter_eduventure",
@@ -25,7 +25,22 @@ function SignUpPlate(){
         fontSize:"11pt",
         marginTop:"36px",
         color:"#000033",
+        cursor:"Pointer"
+    }
+    var emailRegex=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    const [form, formthing] = useState('')
+    const [currentInfo, setcurrentInfo] = useState('inputForm')
 
+    const handleInput =(e)=>{
+        formthing(e.target.value)
+    }
+    const handleClick=()=>{
+        if(emailRegex.test(form)){
+            setcurrentInfo('inputForm')
+            console.log("We Gucci")}
+        else{
+            setcurrentInfo('inputFormFalse')
+            console.log("Nah that aint it")}
     }
     return(
     <div className="platebox">
@@ -35,10 +50,10 @@ function SignUpPlate(){
                 <h1 style={head}>What's Your Email?</h1>
                 <h3 style={detail}>used to sign in.</h3>
             </div>
-        </div>
-        <input type="text" placeholder="EMail" className="inputForm"></input>
+        </div> 
+        <input type="text" placeholder="EMail" className={currentInfo} value={form} onChange={handleInput}></input>
         <div style={{textAlign:"center", marginTop:"360px"}}>
-            <button className="proceedbtn"><img src={Arrow} alt={""}/></button>
+            <button className="proceedbtn" onClick={handleClick}><img src={require('../assets/icons/Arrow.png')} alt={"→"}/></button>
             <h4 style={botalt}>already have an account?</h4>
         </div>
     </div>);

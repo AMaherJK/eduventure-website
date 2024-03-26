@@ -100,6 +100,21 @@ code {
   outline: none;
   box-shadow: none
 }
+.inputFormFalse{
+  height: 50px;
+  width: 600px;
+  padding: 5px 5px 5px 10px;
+  font-family: inter_eduventure;
+  font-weight: 500;
+  font-size: 18pt;
+  border-radius: 5px;
+  margin-left: 50px;
+  background-color: #ECECEC;
+  color:#000033;
+  border: none;
+  outline: 2px red solid;
+  box-shadow: none
+}
 
 .proceedbtn{
   height: 120px;
@@ -122,6 +137,7 @@ code {
 .BigMessageSignStyle{
   font-family: Kufam_eduventure;
   font-size: 120pt;
+  font-weight: 1000;
   text-transform: uppercase;
   line-height: 85%;
   color: #ffffff;
