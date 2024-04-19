@@ -1,6 +1,11 @@
 import '../index.css';
+import {Link} from "react-router-dom"
 function SignUpButton() {
 
-    return(<button className="signUpBtn" >Sign up</button>);
+    return(
+        <Link to="/signup">
+        <button className="signUpBtn" >Sign up</button>
+        </Link>
+        );
 }
 export default SignUpButton;

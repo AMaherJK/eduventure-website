@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Stage from './SignUpPlateStage'
+import Stage from './LogInPlateStage'
 import { Link } from 'react-router-dom';
-function SignUpPlate() {
+
+function LogInPlate() {
     const head = {
         fontFamily: "inter_eduventure",
         fontWeight: "900",
@@ -29,14 +30,13 @@ function SignUpPlate() {
     }
 
     var emailRegex = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
-    var usernameRegex = /^[0-9A-Za-z-\_\.]{6,24}$/;
     var passwrodRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,24}$/;
     const [form, formthing] = useState('')
     const [currentInfo, setcurrentInfo] = useState('inputForm')
     const [stage, setStage] = useState(0)
     const [headText, setheadText] = useState("What's Your Email?")
     const [detailText, setdetailText] = useState("used to sign in.")
-    const [userData, setUserData] = useState({ Email: "", bDay: "", username: "", password: "" })
+    const [userData, setUserData] = useState({ Email: "", password: "" })
     const [passwordVis, setpasswordVis] = useState("password")
 
     const handleInput = (e) => {
@@ -49,12 +49,6 @@ function SignUpPlate() {
                 handleClick_Email()
                 break
             case 1:
-                handleClick_Birthdate()
-                break
-            case 2:
-                handleClick_Username()
-                break
-            case 3:
                 handleClick_password()
                 break
             default:
@@ -77,30 +71,6 @@ function SignUpPlate() {
         }
     }
 
-    const handleClick_Birthdate = () => {
-        setUserData({
-            ...userData,
-            bDay: form
-        })
-        advanceStage()
-    }
-
-    const handleClick_Username = () => {
-        if (usernameRegex.test(form)) { //validating that the username is in correct form
-            setcurrentInfo('inputForm')
-            setUserData({
-                ...userData,
-                username: form
-            })
-            advanceStage()
-        }
-        else { //missing proper visual feedback
-            setcurrentInfo('inputFormFalse')
-            console.log("bad username")
-
-        }
-    }
-
     const handleClick_password = () => {
         if (passwrodRegex.test(form)) {
             setcurrentInfo('inputForm')
@@ -116,12 +86,11 @@ function SignUpPlate() {
         }
     }
 
-
     const advanceStage = () => {
         console.log(userData)
         console.log(stage)
         formthing("")
-        if (stage < 3) {
+        if (stage < 2) {
             setStage(stage + 1);
             updatecontents();
         }
@@ -131,19 +100,11 @@ function SignUpPlate() {
         switch (stage + 1) {
             case 0:
                 setheadText("What's Your Email?")
-                setdetailText("used to sign in.")
+                setdetailText("use your address to log in")
                 break
             case 1:
-                setheadText("When were you born?")
-                setdetailText("Let’s find out how old you are.")
-                break
-            case 2:
-                setheadText("Choose username")
-                setdetailText("Must be unique.")
-                break
-            case 3:
-                setheadText("Set your password")
-                setdetailText("make sure it’s a good one!")
+                setheadText("Type in your password")
+                setdetailText("your pass key!")
                 break
             default:
                 break
@@ -169,19 +130,17 @@ function SignUpPlate() {
                 </div>
             </div>
             {(stage === 0) ? <input type="text" placeholder="EMail" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                : (stage === 1) ? <input type="date" className={currentInfo} value={form} onChange={handleInput} max="2015-01-31" min="1930-01-31" onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                    : (stage === 2) ? <input type="text" placeholder="Username" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                        : <div style={{ display: "flex", alignItems: "center" }}>
-                            <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                            {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../assets/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
-                                : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../assets/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
-                        </div>}
+                : <div style={{ display: "flex", alignItems: "center" }}>
+                    <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                    {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../assets/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
+                        : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../assets/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
+                </div>}
 
             <div style={{ textAlign: "center", marginTop: "360px" }}>
                 <button className="proceedbtn" onClick={handleClick}><img src={require('../assets/icons/Arrow.png')} alt={"→"} /></button>
-                <Link to="/login">
-                <h4 style={botalt}>already have an account?</h4></Link>
+                <Link to="/signup">
+                    <h4 style={botalt}>Don't have an account?</h4></Link>
             </div>
         </div >);
-};
-export default SignUpPlate;
+}
+export default LogInPlate

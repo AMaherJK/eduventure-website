@@ -115,7 +115,20 @@ code {
   outline: 2px red solid;
   box-shadow: none
 }
+.dateInput{
+  height: 50px;
+  padding: 5px 5px 5px 10px;
+  font-family: inter_eduventure;
+  font-weight: 500;
+  font-size: 18pt;
+  border-radius: 5px;
+  background-color: #ECECEC;
+  color:#000033;
+  border: none;
+  outline: none;
+  box-shadow: none
 
+}
 .proceedbtn{
   height: 120px;
   width: 120px;
@@ -145,10 +158,18 @@ code {
   margin-left: 70px;
   margin-top: 300px;
 }
-.Maindev{
+.SignUpdev{
   background-color:#FF3399;
   background-image:url(assets/Vector\ 1.svg) ;
   background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.LogIndev{
+  background-color:#FF3399;
+  background-image:url(assets/Vector\ 2.svg) ;
+  background-position:center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;

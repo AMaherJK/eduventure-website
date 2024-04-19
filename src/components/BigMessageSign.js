@@ -1,6 +1,5 @@
 import '../index.css';
 function BigMessageSign(props){
-    console.log(props.message.length)
     if(props.message.length===2){
         return(
             <h1 className="BigMessageSignStyle">

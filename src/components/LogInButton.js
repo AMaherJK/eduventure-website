@@ -1,4 +1,5 @@
+import {Link} from "react-router-dom"
 function LogInButton(){
-    return(<button className="logInBtn">Log in</button>);
+    return(<Link to="/login"><button className="logInBtn">Log in</button></Link>);
 }
 export default LogInButton;
