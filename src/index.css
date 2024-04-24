@@ -5,28 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 @font-face {
   font-family: inter_eduventure;
   src: url(./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf);
-} 
+}
+
 @font-face {
   font-family: Kufam_eduventure;
   src: url(./assets/Fonts/Kufam-VariableFont_wght.ttf);
-} 
-.signUpBtn{
-  width:220px;
-  height:90px;
-  color:#000033;
-  background-color:#66CCCC;
-  font-size:30pt;
-  border-radius:20px;
+}
+
+.signUpBtn {
+  width: 220px;
+  height: 90px;
+  color: #000033;
+  background-color: #66CCCC;
+  font-size: 30pt;
+  border-radius: 20px;
   text-transform: uppercase;
   font-family: inter_eduventure;
   font-weight: 600;
@@ -35,13 +38,14 @@ code {
   box-shadow: none;
   transition: all 0.2s ease-in;
 }
-.logInBtn{
-  width:220px;
-  height:90px;
-  color:#000033;
-  background-color:#FF3399;
-  font-size:30pt;
-  border-radius:20px;
+
+.logInBtn {
+  width: 220px;
+  height: 90px;
+  color: #000033;
+  background-color: #FF3399;
+  font-size: 30pt;
+  border-radius: 20px;
   text-transform: uppercase;
   font-family: inter_eduventure;
   font-weight: 600;
@@ -51,41 +55,47 @@ code {
   transition: all 0.2s ease-in;
 
 }
-.logInBtn:hover{
-    background-color:#ffffff;
-    box-shadow: -5px -5px  #FF3399 inset;
-  }
-  .logInBtn:active:hover{
-    background-color:#ffffff;
-    font-weight: 800;
-    box-shadow: -10px -10px  #FF3399 inset;
-  }
 
-.signUpBtn:hover{
-  color:#66CCCC;
-  background-color:#000033;
-  box-shadow: -5px -5px  #66CCCC inset;
+.logInBtn:hover {
+  background-color: #ffffff;
+  box-shadow: -5px -5px #FF3399 inset;
 }
-.signUpBtn:active:hover{
-  color:#66CCCC;
-  background-color:#000033;
+
+.logInBtn:active:hover {
+  background-color: #ffffff;
   font-weight: 800;
-  box-shadow: -10px -10px  #66CCCC inset;
+  box-shadow: -10px -10px #FF3399 inset;
 }
 
-.platebox{
+.signUpBtn:hover {
+  color: #66CCCC;
+  background-color: #000033;
+  box-shadow: -5px -5px #66CCCC inset;
+  cursor: pointer
+}
+
+.signUpBtn:active:hover {
+  color: #66CCCC;
+  background-color: #000033;
+  font-weight: 800;
+  box-shadow: -10px -10px #66CCCC inset;
+  cursor: pointer
+}
+
+.platebox {
   height: 840px;
   width: 700px;
-  background-color:#ffffff;
-  background-image:url(./assets/imgs/plateBackground.png) ;
-  border-radius:10px;
+  background-color: #ffffff;
+  background-image: url(./assets/imgs/plateBackground.png);
+  border-radius: 10px;
   margin-left: 55%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  cursor:default;
+  cursor: default;
 }
-.inputForm{
+
+.inputForm {
   height: 50px;
   width: 600px;
   padding: 5px 5px 5px 10px;
@@ -95,12 +105,13 @@ code {
   border-radius: 5px;
   margin-left: 50px;
   background-color: #ECECEC;
-  color:#000033;
+  color: #000033;
   border: none;
   outline: none;
   box-shadow: none
 }
-.inputFormFalse{
+
+.inputFormFalse {
   height: 50px;
   width: 600px;
   padding: 5px 5px 5px 10px;
@@ -110,12 +121,13 @@ code {
   border-radius: 5px;
   margin-left: 50px;
   background-color: #ECECEC;
-  color:#000033;
+  color: #000033;
   border: none;
   outline: 2px red solid;
   box-shadow: none
 }
-.dateInput{
+
+.dateInput {
   height: 50px;
   padding: 5px 5px 5px 10px;
   font-family: inter_eduventure;
@@ -123,31 +135,32 @@ code {
   font-size: 18pt;
   border-radius: 5px;
   background-color: #ECECEC;
-  color:#000033;
+  color: #000033;
   border: none;
   outline: none;
   box-shadow: none
-
 }
-.proceedbtn{
+
+.proceedbtn {
   height: 120px;
   width: 120px;
-  background-color:#66CCCC;
-  color:#000033;
+  background-color: #66CCCC;
+  color: #000033;
   border-radius: 33px;
   transition: all 0.2s ease-in;
   border: none;
   outline: none;
   box-shadow: none
-
 }
-.proceedbtn:hover{
+
+.proceedbtn:hover {
   height: 120px;
   width: 120px;
-  background-color:#ADFFFF;
-  cursor:pointer
+  background-color: #ADFFFF;
+  cursor: pointer
 }
-.BigMessageSignStyle{
+
+.BigMessageSignStyle {
   font-family: Kufam_eduventure;
   font-size: 120pt;
   font-weight: 1000;
@@ -158,19 +171,160 @@ code {
   margin-left: 70px;
   margin-top: 300px;
 }
-.SignUpdev{
-  background-color:#FF3399;
-  background-image:url(assets/Vector\ 1.svg) ;
+
+.SignUpdev {
+  background-color: #FF3399;
+  background-image: url(assets/Vector\ 1.svg);
   background-position: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
-.LogIndev{
-  background-color:#FF3399;
-  background-image:url(assets/Vector\ 2.svg) ;
-  background-position:center;
+
+.LogIndev {
+  background-color: #FF3399;
+  background-image: url(assets/Vector\ 2.svg);
+  background-position: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
+
+.NavigationBar {
+  height: 150px;
+  width: 100vw;
+  font-family: inter_eduventure;
+  font-size: 30pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: linear-gradient(180deg, #000017 0%, rgba(255, 255, 255, 0) 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  position: sticky;
+  z-index: 999;
+  margin: 0;
+  padding: 0px 1rem;
+
+}
+
+.NavigationBar ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem
+}
+
+.NavigationBar li {
+  list-style: none;
+}
+
+.NavigationBar a {
+  color: inherit
+}
+
+.NavBttn {
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.HomePageDiv {
+  background-color: #ffffff;
+  background-image: url(assets/Vector\ 3.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+
+  width: 100%;
+  height: fit-content;
+
+}
+
+.landing {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: inter_eduventure;
+  font-size: 20pt;
+  margin-top: 5rem;
+  
+}
+.PlayBtn {
+  width: 440px;
+  height: 120px;
+  color: #ffffff;
+  background-color: #FF3399;
+  font-size: 30pt;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: inter_eduventure;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-top: -3rem;
+  transition: all 0.2s ease-in;
+  z-index: 1;
+
+}
+.PlayBtn:hover {
+  background-color: hsl(285, 100%, 50%);
+  box-shadow: -5px -5px #ffffff inset;
+}
+.PlayBtn:active:hover {
+  background-color: hsl(285, 100%, 50%);
+  font-weight: 800;
+  box-shadow: -10px -10px #ffffff inset;
+}
+
+.Footer{
+  background-color: #000017;
+  width: 100vw;
+  height: 670px;
+  color: #FFFFFF;
+  margin-top: 3000px;
+  display: table;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  }
+  .socialmedia{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: fit-content;
+    padding: 0;
+    margin: auto;
+  }
+  .socialmedia li{
+    list-style: none;
+    margin-top: 2rem;
+  }
+  .Footer p{  
+    font-size: 20pt;
+    margin-top: -1rem;
+  }
+  .subFooter{
+    background-color: #000033;
+    width: 100vw;
+    height: 100px;
+    font-family: inter_eduventure;
+    font-size: 30pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }

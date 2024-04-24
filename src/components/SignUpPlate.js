@@ -179,8 +179,7 @@ function SignUpPlate() {
 
             <div style={{ textAlign: "center", marginTop: "360px" }}>
                 <button className="proceedbtn" onClick={handleClick}><img src={require('../assets/icons/Arrow.png')} alt={"→"} /></button>
-                <Link to="/login">
-                <h4 style={botalt}>already have an account?</h4></Link>
+                <Link to="/login"><h4 style={botalt}>already have an account?</h4></Link>
             </div>
         </div >);
 };
