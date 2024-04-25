@@ -225,7 +225,7 @@ code {
   color: inherit
 }
 
-.NavBttn {
+.RightsectionNavBar {
   margin-right: 3rem;
   display: flex;
   align-items: center;
@@ -256,8 +256,9 @@ code {
   font-family: inter_eduventure;
   font-size: 20pt;
   margin-top: 5rem;
-  
+
 }
+
 .PlayBtn {
   width: 440px;
   height: 120px;
@@ -276,17 +277,19 @@ code {
   z-index: 1;
 
 }
+
 .PlayBtn:hover {
   background-color: hsl(285, 100%, 50%);
   box-shadow: -5px -5px #ffffff inset;
 }
+
 .PlayBtn:active:hover {
   background-color: hsl(285, 100%, 50%);
   font-weight: 800;
   box-shadow: -10px -10px #ffffff inset;
 }
 
-.Footer{
+.Footer {
   background-color: #000017;
   width: 100vw;
   height: 670px;
@@ -297,34 +300,70 @@ code {
   justify-content: center;
   text-align: center;
   padding: 0;
-  }
-  .socialmedia{
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-    width: fit-content;
-    padding: 0;
-    margin: auto;
-  }
-  .socialmedia li{
-    list-style: none;
-    margin-top: 2rem;
-  }
-  .Footer p{  
-    font-size: 20pt;
-    margin-top: -1rem;
-  }
-  .subFooter{
-    background-color: #000033;
-    width: 100vw;
-    height: 100px;
-    font-family: inter_eduventure;
-    font-size: 30pt;
-    font-weight: 500;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+}
 
-  }
+.socialmedia {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  width: fit-content;
+  padding: 0;
+  margin: auto;
+}
+
+.socialmedia li {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.Footer p {
+  font-size: 20pt;
+  margin-top: -1rem;
+}
+
+.subFooter {
+  background-color: #000033;
+  width: 100vw;
+  height: 100px;
+  font-family: inter_eduventure;
+  font-size: 30pt;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.SettingsBtn {
+  width: 90px;
+  height: 90px;
+  background-color: #000033;
+  border-radius: 20px;
+  transition: all 100ms ease-in-out ;
+}
+
+.SettingsBtn:hover {
+  background-color: #FF3399;
+}
+
+.profilePicNavBarcontainer {
+  width: 90px;
+  height: 90px;
+  background-color: #FFFFFF;
+  border-radius: 90px;
+  transition: all 300ms ease-in-out ;
+  overflow: hidden;
+  display: flex;
+}
+.userImg{
+  object-fit: contain;
+  position: center;
+  transition: all 100ms ease-in-out ;
+
+}
+.userImg:hover{
+  opacity: 75%;
+
+}

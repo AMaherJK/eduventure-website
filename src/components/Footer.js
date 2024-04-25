@@ -1,11 +1,10 @@
 import '../index.css';
-import LogoNwordmark from './logoNwordmark'
 function Footer(props) {
 
     return (
         <>
             <div className='Footer'>
-                <div className='subFooter'>Sign Up & Download the game</div>
+                {(!props.loggedin)?<div className='subFooter'>Sign Up & Download the game</div>:<></>}
                 <ul className='socialmedia'>
                     <li><a href="https://www.facebook.com" target="_blank" rel='noopener noreferrer'><img src={require("../assets/imgs/SocialMedia/Facebook.png")} alt='facebook' /></a></li>
                     <li><a href="https://www.instagram.com" target="_blank" rel='noopener noreferrer'><img src={require("../assets/imgs/SocialMedia/Instagram Circle.png")} alt='instagram' /></a></li>
@@ -14,9 +13,9 @@ function Footer(props) {
                     <li><a href="https://www.youtube.com" target="_blank" rel='noopener noreferrer'><img src={require("../assets/imgs/SocialMedia/YouTube.png")} alt='Youtube' /></a></li>
                     <li><a href="https://www.discord.com" target="_blank" rel='noopener noreferrer'><img src={require("../assets/imgs/SocialMedia/Discord New.png")} alt='Discord' /></a></li>
                 </ul>
-                <img src={require("../assets/imgs/Dark - Horizontal.png")} style={{ width: "40%" }} />
+                <img src={require("../assets/imgs/Dark - Horizontal.png")} style={{ width: "40%" }} alt='logo' />
                 <p>© 2024 Eduventure Project. Eduventure! and any associated logos <br />are trademarks, service marks are registered trademarks.</p>
-                <img src={require("../assets/imgs/SocialMedia/ESRBRating.png")} />
+                <img src={require("../assets/imgs/SocialMedia/ESRBRating.png")} alt='Everyone +10'/>
             </div>
         </>
     )
