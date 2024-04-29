@@ -341,7 +341,7 @@ code {
   height: 90px;
   background-color: #000033;
   border-radius: 20px;
-  transition: all 100ms ease-in-out ;
+  transition: all 100ms ease-in-out;
 }
 
 .SettingsBtn:hover {
@@ -353,17 +353,156 @@ code {
   height: 90px;
   background-color: #FFFFFF;
   border-radius: 90px;
-  transition: all 300ms ease-in-out ;
+  transition: all 300ms ease-in-out;
   overflow: hidden;
   display: flex;
 }
-.userImg{
+
+.userImg {
   object-fit: contain;
   position: center;
-  transition: all 100ms ease-in-out ;
+  transition: all 100ms ease-in-out;
 
 }
-.userImg:hover{
+
+.userImg:hover {
   opacity: 75%;
 
+}
+
+.Profile {
+  width: 60vw;
+  height: 300vw;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.Profilecontents {
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: blur(10px);
+  width: 60vw;
+  height: 300vh;
+  margin-left:20vw ;
+  margin-right:20vw ;
+  
+  z-index: 0;
+  position: absolute;
+}
+.fullInfoBox {
+  width: 55vw;
+  margin-top: 70px;
+  display: inline-flex;
+  justify-content: center;
+  gap: 50px;
+}
+.infobox {
+  text-transform: uppercase;
+  text-align: left;
+  z-index: 1;
+}
+.infobox h1 {
+  margin: 0
+}
+
+.progressBar {
+  width: 25vw;
+  height: 25px;
+  background-color: #D9D9D9;
+  border-radius: 50vh;
+  margin: 0
+}
+.progressBar::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  width: calc(var(--width, 0) * 25vw);
+  height: inherit;
+  min-width: 2rem;
+  max-width: calc(25vw - 1vw);
+  background-color: #FF3399;
+  border-radius: 50vh;
+}
+
+.UserSubjectLevelsContainer {
+  color: #ffffff;
+  width: 55vw;
+  height: fit-content;
+  display: inline-flex;
+  align-items: center;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.subjectlevelprogress{
+  width: 36vw;
+  height:13px;
+  background-color: #000017;
+  border-radius: 13px;
+  margin-left:30rem;
+}
+.subjectlevelprogress::before{
+  content: "";
+  display: flex;
+  align-items: center;
+  width: calc(var(--width, 0) * 25vw);
+  height: inherit;
+  min-width: 2rem;
+  max-width: calc(25vw - 1vw);
+  background-color: #ADFFFF;
+  border-radius: 50vh;
+}
+
+.personalizedContent{
+  width: 55vw;
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1;
+  margin-top: 30px;
+}
+.profileShowcase{
+  width: 66%;
+  display: grid;
+  gap: 30px;
+}
+.achievementShowcase{
+  height:200px;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+.profileSideinfo{
+  width: 30%;
+  height: 300px;
+  background-color: #000033;
+  border-radius: 20px;
+  padding: 25px 0px;
+  text-align: left;
+  display: table;
+}
+
+.profileSideinfotext{
+  color: #ffffff;
+  font-family: inter_eduventure;
+  font-weight: 700;
+  font-size: 18pt;
+  padding-left: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  height:fit-content;
+}
+.profileSideinfotext:hover{
+  color: #ffffff;
+  background-color: #000022;
+}
+.profileSideinfotext h1{
+  color:rgba(255,255,255,0.7);
+  font-weight: 400;
+  font-size: 30pt;
+  margin-left: 5px;
 }
