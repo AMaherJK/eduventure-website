@@ -1,13 +1,11 @@
-import '../index.css';
-import SignUpButton from "./SignUpButton";
-import LogoIcon from "./LogoIcon";
+import './FUS.css';
+import SignUpButton from "../Buttons/SignUpButton";
+import LogoIcon from "../LogoIcon";
 import SearchIcon from "./SearchIcon";
-import UserImgPath from "../assets/imgs/stockimg1.jpg";
+import UserImgPath from "../../assets/imgs/StockImgs/stockimg2.png";
 import { NavLink } from 'react-router-dom';
 function NavBar(props) {
     const seperator = { height: "90px", width: "10px", backgroundColor: "#FF3399", borderRadius: "10px" }
-
-
     return (
         <ul className="NavigationBar">
             <li><LogoIcon /></li>
@@ -21,10 +19,10 @@ function NavBar(props) {
                 {(!props.loggedin) ?
                     <SignUpButton /> :
                     <>
-                        <div className='SettingsBtn'><img src={require("../assets/icons/Settings.png")}/></div>
+                        <div className='SettingsBtn'><img src={require("../../assets/imgs/icons/Settings.png")}/></div>
                         <div className='profilePicNavBarcontainer'>
                             <NavLink to="/u/myprofile">
-                            <img src={UserImgPath} className='userImg'/>
+                            <img src={UserImgPath} className='userImgNavBar'/>
                             </NavLink>
 
                         </div>

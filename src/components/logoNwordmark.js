@@ -1,5 +1,5 @@
-import Path from '../assets/imgs/Dark - Horizontal.png'
-import Path2 from '../assets/imgs/Light - Horizontal.png'
+import Path from '../assets/imgs/Logos/Dark - Horizontal.png'
+import Path2 from '../assets/imgs/Logos/Light - Horizontal.png'
 import {Link} from "react-router-dom"
 const logoNwordmark = (props)=>{ 
     return(<Link to="/">

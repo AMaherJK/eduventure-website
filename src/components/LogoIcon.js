@@ -1,5 +1,5 @@
-import Path from '../assets/imgs/Dark - Icon.png'
-import Path2 from '../assets/imgs/Light - Icon.png'
+import Path from '../assets/imgs/Logos/Dark - Icon.png'
+import Path2 from '../assets/imgs/Logos/Light - Icon.png'
 import {Link} from "react-router-dom"
 const LogoIcon = (props)=>{ 
     return(<Link to="/">

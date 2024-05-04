@@ -1,4 +1,4 @@
-import '../index.css';
+import './Decoratives.css'
 function BigMessageSign(props){
     if(props.message.length===2){
         return(

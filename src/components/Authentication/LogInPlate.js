@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Stage from './LogInPlateStage'
+import Stage from './Decoratives/LogInPlateStage'
 import { Link } from 'react-router-dom';
-
 function LogInPlate() {
+    //#region some local style
     const head = {
         fontFamily: "inter_eduventure",
         fontWeight: "900",
@@ -28,7 +28,8 @@ function LogInPlate() {
         color: "#000033",
         cursor: "Pointer"
     }
-
+    //#endregion
+    
     var emailRegex = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
     var passwrodRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,24}$/;
     const [form, formthing] = useState('')
@@ -129,15 +130,15 @@ function LogInPlate() {
                     <h3 style={detail}>{detailText}</h3>
                 </div>
             </div>
-            {(stage === 0) ? <input type="text" placeholder="EMail" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+            {(stage === 0) ? <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
                 : <div style={{ display: "flex", alignItems: "center" }}>
                     <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                    {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../assets/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
-                        : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../assets/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
+                    {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
+                        : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
                 </div>}
 
             <div style={{ textAlign: "center", marginTop: "360px" }}>
-                <button className="proceedbtn" onClick={handleClick}><img src={require('../assets/icons/Arrow.png')} alt={"→"} /></button>
+                <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>
                 <Link to="/signup">
                     <h4 style={botalt}>Don't have an account?</h4></Link>
             </div>

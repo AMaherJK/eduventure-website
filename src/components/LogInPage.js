@@ -1,8 +1,7 @@
 import '../index.css';
-import SignUpPlate from "./SignUpPlate";
-import BigMessageSign from "./BigMessageSign"
+import BigMessageSign from "./Decoratives/BigMessageSign"
 import Logo from "./logoNwordmark";
-import LogInPlate from './LogInPlate';
+import LogInPlate from './Authentication/LogInPlate';
 function SignUpPage(props) {
      return (
           <div className="LogIndev">

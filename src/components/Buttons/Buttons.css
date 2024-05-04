@@ -1,0 +1,54 @@
+.signUpBtn {
+    width: 220px;
+    height: 90px;
+    color: #000033;
+    background-color: #66CCCC;
+    font-size: 30pt;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: inter_eduventure;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.2s ease-in;
+  }
+  .logInBtn {
+    width: 220px;
+    height: 90px;
+    color: #000033;
+    background-color: #FF3399;
+    font-size: 30pt;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: inter_eduventure;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.2s ease-in;
+  }
+  .logInBtn:hover {
+    background-color: #ffffff;
+    box-shadow: -5px -5px #FF3399 inset;
+  }
+  .logInBtn:active:hover {
+    background-color: #ffffff;
+    font-weight: 800;
+    box-shadow: -10px -10px #FF3399 inset;
+  } 
+  .signUpBtn:hover {
+    color: #66CCCC;
+    background-color: #000033;
+    box-shadow: -5px -5px #66CCCC inset;
+    cursor: pointer
+  }
+  .signUpBtn:active:hover {
+    color: #66CCCC;
+    background-color: #000033;
+    font-weight: 800;
+    box-shadow: -10px -10px #66CCCC inset;
+    cursor: pointer
+  }
+  
+  
