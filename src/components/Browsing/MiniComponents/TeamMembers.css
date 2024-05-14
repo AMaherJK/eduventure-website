@@ -1,0 +1,61 @@
+
+.TeamMember{
+    width: 275px;
+    height: 412px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 60px 60px 60px 60px;
+  }
+  .TeamMember:hover{cursor:pointer;}
+  .TeamMember:hover .PhotoContainer{background-position: bottom;}
+  .TeamMember:hover .DevPhoto{background-position: top;scale: 115%;}
+  .TeamMember:hover .NameTitlePlate{background-color: #000022;}
+  .PhotoContainer{
+    width: 100%;
+    height: 80%;
+    background-image:url('../../../assets/imgs/Decoratives/DevPhoto/bg1.png');
+    background-position:top;
+    position: relative;
+    border-radius: 60px 60px 0 0;
+    transition: background-position 300ms cubic-bezier(.17,.67,.83,.67);
+  }
+  .DevPhoto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat  ;
+    background-position:0% -2%;
+    transform-origin: bottom;
+    transition: all 400ms cubic-bezier(.17,.67,.83,.67);
+  }
+  .AMaher{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/AhmedMaher.png");}
+  .ASaad{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/AhmedMaher.png");}
+  .AAShraf{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/AnasAshraf.png");}
+  .FMoustafa{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/AhmedMaher.png");}
+  .HAboulhassan{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/HazemAboulhassan.png");}
+  .MMohamed{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/AhmedMaher.png");}
+  .MSalah{background-image: url("../../../assets/imgs/Decoratives/DevPhoto/AhmedMaher.png");}
+  .NameTitlePlate{
+    width: 100%;
+    height:20%;
+    border-radius: 0 0 60px 60px;
+    color: white;
+    background-color: #000033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    text-transform: uppercase;
+    box-shadow: 0 2px 0 #fff inset;
+  }
+  .NameTitlePlate h1{
+    font-family: Kufam_eduventure;
+    font-size: 130%;
+    white-space: nowrap;
+    margin: auto 0 0 0;
+  }
+  .NameTitlePlate h2{
+    font-family: inter_eduventure;
+    font-size: 10pt;
+    font-weight: 600;
+  margin: 0 0 auto 0;  }

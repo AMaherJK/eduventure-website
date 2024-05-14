@@ -1,0 +1,99 @@
+.PlayBtn {
+    width: 440px;
+    height: 120px;
+    color: #ffffff;
+    background-color: #FF3399;
+    font-size: 30pt;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: inter_eduventure;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-top: -3rem;
+    transition: all 0.2s ease-in;
+  }
+  .PlayBtn:hover {
+    background-color: hsl(285, 100%, 50%);
+    box-shadow: -5px -5px #ffffff inset;
+  }
+  .PlayBtn:active:hover {
+    background-color: hsl(285, 100%, 50%);
+    font-weight: 800;
+    box-shadow: -10px -10px #ffffff inset;
+  }
+  .landing {
+    background-color: #ffffff;
+    background-image: url(../../assets/imgs/Decoratives/Vector\ 3.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    width: 100%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: inter_eduventure;
+    font-size: 20pt;
+    padding-top: 15rem;
+  }
+  .AboutDivContainer{
+    background-color: #000033;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .AboutContainer{
+    background-color: #ffffff;
+    width: 60%;
+  padding: 10% 5% 10% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .TitleContainer{
+    font-family: Kufam_eduventure;
+    width: fit-content;
+    color: #000033;
+  }
+  .TitleContainer h1{
+    text-shadow: 4px 4px 0px #ffffff,8px 8px 0px #FF3399;
+    font-size: 60pt;
+    font-weight: 900;
+    margin: 0;
+  }
+  .TitleUnderline1{
+    width: 100%;
+    height: 10px;
+    background-color: #000033;
+    margin-top: -20px;
+    border-radius: 0 10px 0px 0;
+  }
+  .TitleUnderline2{
+    width: 110%;
+    height: 10px;
+    background-color: #FF3399;
+    margin-top: 0px;
+    border-radius: 0 5px 5px 0;
+  }
+  .Paragraph{
+    font-family: inter_eduventure;
+    color: #000033;
+    font-size: 20pt;
+
+  }
+  .TeamMembersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }

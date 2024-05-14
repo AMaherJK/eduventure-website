@@ -1,8 +1,5 @@
-import '../../index.css';
 function Footer(props) {
-
     return (
-        <>
             <div className='Footer'>
                 {(!props.loggedin)?<div className='subFooter'>Sign Up & Download the game</div>:<></>}
                 <ul className='socialmedia'>
@@ -17,7 +14,6 @@ function Footer(props) {
                 <p>© 2024 Eduventure Project. Eduventure! and any associated logos <br />are trademarks, service marks are registered trademarks.</p>
                 <img src={require("../../assets/imgs/SocialMedia/ESRBRating.png")} alt='Everyone +10'/>
             </div>
-        </>
     )
 
 }

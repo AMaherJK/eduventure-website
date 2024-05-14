@@ -3,16 +3,17 @@ import SignUpButton from "../Buttons/SignUpButton";
 import LogoIcon from "../LogoIcon";
 import SearchIcon from "./SearchIcon";
 import UserImgPath from "../../assets/imgs/StockImgs/stockimg2.png";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 function NavBar(props) {
     const seperator = { height: "90px", width: "10px", backgroundColor: "#FF3399", borderRadius: "10px" }
     return (
         <ul className="NavigationBar">
-            <li><LogoIcon /></li>
-            <li>About</li>
-            <li>Community</li>
-            <li>Leaderboards</li>
-            <li>More</li>
+            <NavLink to="/"><li><LogoIcon /></li></NavLink>
+            <NavLink to="/About"><li>About</li></NavLink>
+            <NavLink to="/Community"><li>Community</li></NavLink>
+            <NavLink to="/Leaderboards"><li>Leaderboards</li></NavLink>
+            <NavLink to="/More"><li>More</li></NavLink>
+
             <li className="RightsectionNavBar">
                 <SearchIcon />
                 <div style={seperator}></div>

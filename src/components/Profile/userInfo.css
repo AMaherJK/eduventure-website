@@ -1,0 +1,86 @@
+.userImgStyle {
+    width: 100%;
+    height:fit-content;
+    aspect-ratio: 1;
+    border-radius: 20px;
+}
+
+.userNameStyle {
+    font-family: Kufam_eduventure;
+    color: #FFFFFF;
+    font-size: 3.472vw;
+}
+
+.userTagStyle {
+    font-family: Inter_eduventure;
+    color: #FF3399;
+    font-size: 2.431vw;
+}
+
+.userIDStyle {
+    font-family: Inter_eduventure;
+    color: #ADFFFF;
+    font-size: 1.042vw;
+    font-weight: 400;
+}
+
+.userDescriptionStyle {
+    font-family: Inter_eduventure;
+    color: #FFFFFF;
+    font-size: 0.694vw;
+    font-weight: 400;
+}
+.userLevelStyle {
+    font-family: "Inter_eduventure";
+    color: #FFFFFF;
+    font-size: 2.431vw;
+    margin-top: 0px
+}
+
+.XPRemaining{
+    font-family: Inter_eduventure;
+    color: #FFFFFF;
+    font-size: 0.694vw;
+    margin-top: -10px;
+    text-align: right;
+}
+.progressBar {
+    width: 65%;
+    height: 25px;
+    background-color: #D9D9D9;
+    border-radius: 50vh;
+    margin: 0
+  }
+  .progressBar::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    width: calc(var(--width, 0) * 65%);
+    height: inherit;
+    min-width: 2rem;
+    max-width: calc(25vw - 1vw);
+    background-color: #FF3399;
+    border-radius: 50vh;
+  }
+  .bottomsectionStyle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        margin-top:-5px;
+  }
+  .fullInfoBox {
+    width: 100%;
+    height: 27.5%;
+    max-height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  } 
+  .infobox-text {
+    text-transform: uppercase;
+    text-align: left;
+    z-index: 1;
+  }
+  .infobox-text h1 {
+    margin: 0
+  }
