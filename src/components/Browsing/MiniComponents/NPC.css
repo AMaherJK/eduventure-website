@@ -1,0 +1,60 @@
+
+.NPC{
+    width: 32%;
+    height: 400px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 60px 60px 60px 60px;
+  }
+  .NPC:hover{cursor:pointer;}
+  .NPC:hover .NPCPhotoContainer{background-position: bottom;}
+  .NPC:hover .NPCPhoto{background-position: top;scale: 120%;}
+  .NPC:hover .NameTitlePlateNPC{background-color: #000022;}
+
+  .NPCPhotoContainer{
+    width: 100%;
+    height: 80%;
+    background-image:url('../../../assets/imgs/Decoratives/DevPhoto/bg1.png');
+    background-position:top;
+    position: relative;
+    border-radius: 60px 60px 0 0;
+    transition: background-position 300ms cubic-bezier(.17,.67,.83,.67);
+  }
+  .NPCPhoto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat  ;
+    background-position:0% -5%;
+    transform-origin: bottom;
+    transition: all 400ms cubic-bezier(.17,.67,.83,.67);
+  }
+  .npc1{background-image: url('../../../assets/imgs/Decoratives/NPCPhoto/NPC1.png');}
+  .npc2{background-image: url('../../../assets/imgs/Decoratives/NPCPhoto/NPC2.png');}
+  .npc3{background-image: url('../../../assets/imgs/Decoratives/NPCPhoto/NPC3.png');}
+  .NameTitlePlateNPC{
+    width: 100%;
+    height:20%;
+    border-radius: 0 0 60px 60px;
+    color: white;
+    background-color: #000033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    text-transform: uppercase;
+    box-shadow: 0 2px 0 #fff inset;
+  }
+  .NameTitlePlateNPC h1{
+    font-family: Kufam_eduventure;
+    font-size: 175%;
+    white-space: nowrap;
+    margin: auto 0 0 0;
+  }
+  .NameTitlePlateNPC h2{
+    font-family: inter_eduventure;
+    font-size: 10pt;
+    color: #ADFFFF;
+    font-weight: 600;
+    margin: 0 0 auto 0;  
+}

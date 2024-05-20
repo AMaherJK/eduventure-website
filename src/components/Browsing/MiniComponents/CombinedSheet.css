@@ -1,0 +1,128 @@
+
+.HeadlineNews{
+    width: 75%;
+    height: fit-content;
+    display: flex;
+    margin-top: 10%;
+    gap: 50px;
+  }
+  .HeadlineNews img{
+    width: 42%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0px 50px;
+    border: #FFFFFF 8px solid;
+  }
+  .HeadlineInfo{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    color: #000033;
+    text-align: left;
+  }
+  .HeadlineInfo h1{
+    font-family: kufam_eduventure;
+    font-size: 70pt;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+  }
+  .HeadlineInfo p{
+    font-family: inter_eduventure;
+    text-transform:initial;
+    font-size: 24pt;
+    font-weight: 300;
+  }
+  .TheLatest{
+    width: 75%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-top: 5%;
+  }
+  .TheLatest .Title{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:top;
+    width: 100%;
+}
+  .TheLatest h1{
+    font-family: Kufam_eduventure;
+    color: #000033;
+    text-shadow: 4px 4px 0px #ffffff,8px 8px 0px #FF3399;
+    font-size: 60pt;
+    font-weight: 900;
+    margin: 0;
+    text-align: left;
+}
+.TheLatest h4{
+    font-family: inter_eduventure;
+    color: #000033;
+    margin: 0;
+    text-align: right;
+}
+.NewsContainer{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+.NewsPreview{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.NewsPreview img{
+    width: 100%;
+    object-fit: cover;  
+}
+.NewsPreview h2{
+    color: #000033;
+    text-align: left;
+    width: 100%;
+    font-size: 25pt;
+    margin:0
+}
+.NewsPreview .details{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.NewsPreview h6{
+    margin:0;
+    font-weight: 400;
+}
+.ShopSection{
+  width: 100%;
+  height: 700px;
+  background-image: url("../../../assets/imgs/Decoratives/ShopSectionBG.png");
+  background-size: cover;
+  margin: 5% 0 7.5% 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ShopSection .typography{
+  width: 35%;
+  text-align: left;
+  margin:10% 0 0 15% ;
+}
+.ShopSectionimg{
+  background-image: url("../../../components/../assets/imgs/Decoratives/ShopsGraphics.png");
+  height: 110%;
+  width: 50%;
+  margin-top: -3.5%;
+}
+.Yellowbutton{
+  padding: 2%;
+  border-radius: 15px;
+  background-color: #FFFF33;
+  color: #000033;
+  width: fit-content;
+}

@@ -11,7 +11,8 @@ function NavBar(props) {
             <NavLink to="/"><li><LogoIcon /></li></NavLink>
             <NavLink to="/About"><li>About</li></NavLink>
             <NavLink to="/Community"><li>Community</li></NavLink>
-            <NavLink to="/Leaderboards"><li>Leaderboards</li></NavLink>
+            <NavLink to="/Battle"><li>Battle</li></NavLink>
+            <NavLink to="/Shop"><li>Shop</li></NavLink>
             <NavLink to="/More"><li>More</li></NavLink>
 
             <li className="RightsectionNavBar">

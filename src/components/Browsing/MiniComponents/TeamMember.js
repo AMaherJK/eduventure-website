@@ -1,4 +1,3 @@
-import '../browsing.css'
 import './TeamMembers.css'
 import AMaher from '../../../assets/imgs/Decoratives/DevPhoto/AhmedMaher.png'
 function TeamMember(props){
@@ -13,10 +12,9 @@ function TeamMember(props){
             (ImgID===1)?<div className='DevPhoto ASaad'/>:
             (ImgID===2)?<div className='DevPhoto AAShraf'/>:
             (ImgID===3)?<div className='DevPhoto FMoustafa'/>:
-            (ImgID===4)?<div className='DevPhoto AMaher'/>:
+            (ImgID===4)?<div className='DevPhoto HAboulhassan'/>:
             (ImgID===5)?<div className='DevPhoto MMohamed'/>:
             <div className='DevPhoto MSalah'/>
-        
         }
         </div>
         <div className='NameTitlePlate'>
