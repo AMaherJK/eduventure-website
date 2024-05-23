@@ -5,6 +5,7 @@ import LogInPage from './components/LogInPage';
 import Browsing from './components/Browsing/Browsing';
 import Landing from './components/Browsing/Landing';
 import About from './components/Browsing/About';
+import Community from './components/Browsing/Community';
 import MyProfile from './components/Profile/MyProfile';
 import EditProfilePage from './components/Profile/editProfile/EditProfilePage';
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/" Component={Browsing}>
         <Route path='/' Component={Landing} />
         <Route path='/About' Component={About} />
+        <Route path='/Community' Component={Community} />
       </Route>
       <Route exact path="/u/myprofile" Component={MyProfile} />
       <Route exact path="/u/myprofile/edit" Component={EditProfilePage} />
