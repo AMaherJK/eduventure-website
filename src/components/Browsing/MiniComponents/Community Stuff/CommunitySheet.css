@@ -1,0 +1,323 @@
+h1,h2,h3,h4,h5,h6,p{
+    margin:0
+}
+.PostPrevContainer {
+    width: 94%;
+    height: 5rem;
+    padding: 1rem 3%;
+    background-color: hwb(240 0% 75% / 0.5);
+    transition: all 400ms ease-in-out;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    font-family: inter_eduventure;
+}
+
+.expandedContainer {
+    width: 94%;
+    height: fit-content;
+    padding: 1rem 3%;
+    background-color: hwb(240 0% 75% / 0.5);
+    transition: all 400ms ease-in-out;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    font-family: inter_eduventure;
+    background-color: hwb(240 0% 75% / 0.8);
+    box-shadow: rgba(102, 204, 204, 0.3) 0px -50px 36px -28px inset, rgba(255, 51, 153, 0.4) 5px 5px, rgba(255, 51, 153, 0.3) 10px 10px, rgba(255, 51, 153, 0.2) 15px 15px, rgba(255, 51, 153, 0.1) 20px 20px, rgba(255, 51, 153, 0.05) 25px 25px;
+}
+
+.expandedContainer p {
+    color: #fff;
+    font-size: 16pt;
+}
+
+.PostPrevContainer:hover {
+    background-color: hwb(240 0% 75% / 0.8);
+    height: 7rem;
+    box-shadow: rgba(102, 204, 204, 0.3) 0px -50px 36px -28px inset, rgba(255, 51, 153, 0.4) 5px 5px, rgba(255, 51, 153, 0.3) 10px 10px, rgba(255, 51, 153, 0.2) 15px 15px, rgba(255, 51, 153, 0.1) 20px 20px, rgba(255, 51, 153, 0.05) 25px 25px;
+}
+
+.PrevContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.PostPrevContents {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ContentsData {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.PostPrevContents h1 {
+    margin: 0;
+    font-size: 40pt;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ContentsData h3 {
+    margin: 0;
+    opacity: 75%;
+    font-weight: 500;
+}
+
+.ContentsData h3:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.ContentsData .Author {
+    color: #66CCCC;
+}
+
+.ContentsData .Type {
+    color: #ff3399;
+}
+
+.ContentsData .Date {
+    color: #fff;
+}
+
+.PostPrevLSide {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.CommentsButton h2 {
+    margin: 7px 0 0 0;
+    text-shadow: 5px 0px 5px #000033;
+    height: 100%;
+}
+
+.CommentsButton {
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    border: rgb(255, 51, 153) solid 2px;
+    color: #fff;
+    background-image: url("../../../../assets/imgs/icons/CommentButton.png");
+    background-size: contain;
+    font-size: 25pt;
+    transition: all 400ms ease-in-out;
+    text-align: center;
+}
+
+.CommentsButton:hover {
+    box-shadow: rgba(255, 51, 153, 0.27) 0px 54px 55px, rgba(255, 51, 153, 0.14) 0px -12px 30px,
+        rgba(255, 51, 153, 0.14) 0px 4px 6px, rgba(255, 51, 153, 0.19) 0px 12px 13px,
+        rgba(255, 51, 153, 0.11) 0px -3px 5px;
+    font-size: 30pt;
+    cursor: pointer;
+}
+
+.Toggle {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    border: #66CCCC solid 2px;
+    transition: box-shadow, background-size 400ms ease-in-out;
+    background-image: url("../../../../assets/imgs/icons/ArrowDown.png");
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Toggle:hover {
+    box-shadow: rgba(102, 204, 204, 0.25) 0px 54px 55px, rgba(102, 204, 204, 0.12) 0px -12px 30px,
+        rgba(102, 204, 204, 0.12) 0px 4px 6px, rgba(102, 204, 204, 0.17) 0px 12px 13px,
+        rgba(102, 204, 204, 0.09) 0px -3px 5px;
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+.ToggleNotActive {
+    transform: rotate(0deg);
+}
+
+.ToggleActive {
+    transform: rotate(180deg);
+}
+
+.CommentPopUpContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 51, 0.2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 5;
+    inset: 0;
+    offset: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.CommentsContainer {
+    padding:1% 5%;
+    width: 60%;
+    background-color: #000033;
+    margin: auto;
+    border: rgb(255, 51, 153) solid 2px;
+    border-top: none;
+    border-radius: 0 0px 20px 20px;
+    box-shadow: rgba(255, 51, 153, 0.27) 0px 54px 55px, rgba(255, 51, 153, 0.14) 0px -12px 30px,
+        rgba(255, 51, 153, 0.14) 0px 4px 6px, rgba(255, 51, 153, 0.19) 0px 12px 13px,
+        rgba(255, 51, 153, 0.11) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.CommentsContainer .Title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.CommentsContainer .Title h1 {
+    font-size: 45pt; 
+}
+
+.CloseBtn {
+    height: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    border: #ff3399 solid 2px;
+    font-size: 45pt;
+    font-weight: 800;
+    transition: all 400ms ease-in-out;
+    text-align: center;
+    align-items: center;
+    background-color: #000033;
+}
+
+.CloseBtn:hover {
+    box-shadow: rgba(255, 51, 153, 0.27) 0px 54px 55px, rgba(255, 51, 153, 0.14) 0px -12px 30px,
+        rgba(255, 51, 153, 0.14) 0px 4px 6px, rgba(255, 51, 153, 0.19) 0px 12px 13px,
+        rgba(255, 51, 153, 0.11) 0px -3px 5px;
+    background-color: #2E0946;
+    font-size: 50pt;
+    cursor: pointer;
+
+}
+.p50{ width: 50%;}
+
+.Comment{
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    color: #ffffffd0;
+}
+.Comment .T{
+    display: flex;
+    justify-content: space-between;
+}
+.T2{    
+    display: flex;
+    justify-content: space-between;
+}
+.Comment .T img{
+    height: 40px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.Comment .T a{
+    font-size: 24pt;
+    font-weight:700;
+    text-transform: uppercase;
+}
+.Comment .T a:hover{
+    color: #fff;
+    text-shadow: none;
+    cursor:pointer
+}
+.Comment p{
+    width: 100%;
+    height: fit-content;
+    word-wrap: break-word;
+}
+.CommentBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+.CommentSeperator{
+    width: 80%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: rgba(102, 204, 204, 0.5);
+}
+.PostAComment{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family: inter_eduventure;
+
+}
+.PostAComment textarea{
+    width: 100%;
+    height: 5rem;
+    margin: 0;
+    color: #fff;
+    background-color: #000033;
+    border: #ff3399 solid 2px;
+    outline: none;
+    font-size: 12pt;
+    border-radius: 10px;
+
+}
+.PostAComment .Btns{
+    width: 100%;
+    display: flex;
+    justify-content:right;
+    margin-top: 1rem;
+}
+.PostAComment button{
+    width:30%;
+    height:3rem;
+    margin-left: 1rem;
+    padding: 0;
+    font-weight: 700;
+    font-size: 25pt;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: all 200ms ease-in-out;
+}
+.PostAComment .Btns .post{
+    background-color: #ff3399;
+    color: #000033;
+}
+.PostAComment .Btns .cancel{
+    background-color: #000033;
+    color: #ff3399;
+    border: #ff3399 solid 2px;
+}
+.PostAComment .Btns .post:hover{
+    background-color: #ff99cc;
+    cursor: pointer;
+}
+.PostAComment .Btns .cancel:hover{
+    color: #ff99cc;
+    border: #ff99cc solid 2px;
+    cursor: pointer;
+}
