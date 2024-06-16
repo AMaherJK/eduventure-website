@@ -16,7 +16,6 @@ function SignUpPlate() {
         textTransform: "lowercase",
         fontSize: "18pt",
         color: "#000033",
-        marginTop: "-30px"
 
     }
     const botalt = {
@@ -24,14 +23,13 @@ function SignUpPlate() {
         fontWeight: "800",
         textTransform: "uppercase",
         fontSize: "11pt",
-        marginTop: "36px",
+        marginTop: "3rem",
         color: "#000033",
-        cursor: "Pointer"
     }
-    //#endregion
-    
+//#endregion
+
     var emailRegex = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
-    var usernameRegex = /^[0-9A-Za-z-\_\.]{6,24}$/;
+    var usernameRegex = /^[0-9A-Za-z-]{6,24}$/;
     var passwrodRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,24}$/;
     const [form, formthing] = useState('')
     const [currentInfo, setcurrentInfo] = useState('inputForm')
@@ -163,25 +161,26 @@ function SignUpPlate() {
 
     return (
         <div className="platebox">
-            <div style={{ paddingTop: "38px" }}>
-                <Stage stage={stage} />
-                <div style={{ textAlign: "center", marginTop: "-10px", marginBottom: "50px" }}>
-                    <h1 style={head}>{headText}</h1>
-                    <h3 style={detail}>{detailText}</h3>
+            <div style={{ width: "100%", alignItems: "center", display: "flex", flexDirection: "column" }}>
+                <div style={{ paddingTop: "3rem" }}>
+                    <Stage stage={stage} />
+                    <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+                        <h1 style={head}>{headText}</h1>
+                        <h3 style={detail}>{detailText}</h3>
+                    </div>
                 </div>
+                {(stage === 0) ? <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                    : (stage === 1) ? <input type="date" className={currentInfo} value={form} onChange={handleInput} max="2015-01-31" min="1930-01-31" onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                        : (stage === 2) ? <input type="text" placeholder="Username" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                        : <div style={{ display: "flex", alignItems: "center", width: "85%" }}>
+                                <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                                {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
+                                    : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
+                            </div>}
             </div>
-            {(stage === 0) ? <input type="text" placeholder="EMail" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                : (stage === 1) ? <input type="date" className={currentInfo} value={form} onChange={handleInput} max="2015-01-31" min="1930-01-31" onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                    : (stage === 2) ? <input type="text" placeholder="Username" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                        : <div style={{ display: "flex", alignItems: "center" }}>
-                            <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                            {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
-                                : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
-                        </div>}
-
-            <div style={{ textAlign: "center", marginTop: "360px" }}>
+            <div style={{ textAlign: "center"}}>
                 <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>
-                <Link to="/login"><h4 style={botalt}>already have an account?</h4></Link>
+                {(stage === 0)?<Link to="/login"><h4 style={botalt}>already have an account?</h4></Link>:<h4 style={botalt}>&nbsp;</h4>}
             </div>
         </div >);
 };

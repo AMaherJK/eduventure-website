@@ -7,43 +7,43 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 @font-face {
   font-family: inter_eduventure;
   src: url(./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
-
 @font-face {
   font-family: Kufam_eduventure;
   src: url(./assets/Fonts/Kufam-VariableFont_wght.ttf);
 }
 .platebox {
-  height: 840px;
-  width: 700px;
+  height: 77.7vh;
+  width: 36.4vw;
   background-color: #ffffff;
   background-image: url(./assets/imgs/Decoratives/plateBackground.png);
   border-radius: 10px;
   margin-left: 55%;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   transform: translateY(-50%);
   cursor: default;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .inputForm {
   height: 50px;
-  width: 600px;
+  width: 85%;
   padding: 5px 5px 5px 10px;
   font-family: inter_eduventure;
   font-weight: 500;
   font-size: 18pt;
   border-radius: 5px;
-  margin-left: 50px;
   background-color: #ECECEC;
   color: #000033;
   border: none;
@@ -53,13 +53,12 @@ code {
 
 .inputFormFalse {
   height: 50px;
-  width: 600px;
+  width: 85%;
   padding: 5px 5px 5px 10px;
   font-family: inter_eduventure;
   font-weight: 500;
   font-size: 18pt;
   border-radius: 5px;
-  margin-left: 50px;
   background-color: #ECECEC;
   color: #000033;
   border: none;

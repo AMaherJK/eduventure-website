@@ -16,7 +16,7 @@ function LogInPlate() {
         textTransform: "lowercase",
         fontSize: "18pt",
         color: "#000033",
-        marginTop: "-30px"
+
 
     }
     const botalt = {
@@ -24,12 +24,11 @@ function LogInPlate() {
         fontWeight: "800",
         textTransform: "uppercase",
         fontSize: "11pt",
-        marginTop: "36px",
+        marginTop: "3rem",
         color: "#000033",
-        cursor: "Pointer"
     }
     //#endregion
-    
+
     var emailRegex = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
     var passwrodRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,24}$/;
     const [form, formthing] = useState('')
@@ -56,7 +55,6 @@ function LogInPlate() {
                 break
         }
     }
-
     const handleClick_Email = () => {
         if (emailRegex.test(form)) { //validating that the email is in correct form
             setcurrentInfo('inputForm')
@@ -71,7 +69,6 @@ function LogInPlate() {
             console.log("Nah that aint it")
         }
     }
-
     const handleClick_password = () => {
         if (passwrodRegex.test(form)) {
             setcurrentInfo('inputForm')
@@ -86,7 +83,6 @@ function LogInPlate() {
             console.log("bad password")
         }
     }
-
     const advanceStage = () => {
         console.log(userData)
         console.log(stage)
@@ -96,7 +92,6 @@ function LogInPlate() {
             updatecontents();
         }
     }
-
     const updatecontents = () => {
         switch (stage + 1) {
             case 0:
@@ -112,7 +107,6 @@ function LogInPlate() {
         }
 
     }
-
     const setpasswordVis_click = () => { //toggles password visibility & manages eye icon
         if (passwordVis === "password")
             setpasswordVis("text")
@@ -123,24 +117,24 @@ function LogInPlate() {
 
     return (
         <div className="platebox">
-            <div style={{ paddingTop: "38px" }}>
-                <Stage stage={stage} />
-                <div style={{ textAlign: "center", marginTop: "-10px", marginBottom: "50px" }}>
-                    <h1 style={head}>{headText}</h1>
-                    <h3 style={detail}>{detailText}</h3>
+            <div style={{ width: "100%", alignItems: "center", display: "flex", flexDirection: "column" }}>
+                <div style={{ paddingTop: "3rem" }}>
+                    <Stage stage={stage} />
+                    <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+                        <h1 style={head}>{headText}</h1>
+                        <h3 style={detail}>{detailText}</h3>
+                    </div>
                 </div>
+                {(stage === 0) ? <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                    : <div style={{ display: "flex", alignItems: "center", width: "85%" }}>
+                        <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                        {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
+                            : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
+                    </div>}
             </div>
-            {(stage === 0) ? <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                : <div style={{ display: "flex", alignItems: "center" }}>
-                    <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                    {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
-                        : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
-                </div>}
-
-            <div style={{ textAlign: "center", marginTop: "360px" }}>
+            <div style={{ textAlign: "center", justifySelf: "end" }}>
                 <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>
-                <Link to="/signup">
-                    <h4 style={botalt}>Don't have an account?</h4></Link>
+                {(stage === 0) ? <Link to="/signup"><h4 style={botalt}>Don't have an account?</h4></Link> : <h4 style={botalt}>&nbsp;</h4>}
             </div>
         </div >);
 }
