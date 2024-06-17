@@ -1,9 +1,8 @@
 import './browsing.css'
 import { useParams } from 'react-router-dom'
-import NewsPrevItem from './MiniComponents/NewsPrevItem'
-// import newsService from '../../../../EduVenturee-master/EduVenturee-master/';
-function NewsPage(props) {
-    var LatestNews = [
+function NewsItem(props) {
+    const { News_id } = useParams();
+    var NewsCatalog = [
         { imgPath: require("../../assets/imgs/StockImgs/stockimg3.png"), ID: "19", Date: "5/8/2024", Type: "Announcement", Title: "New partnership announcement", content: "We are excited to announce a new partnership that will bring more resources and opportunities to our Eduventure community. Stay tuned for more details!" },
         { imgPath: require("../../assets/imgs/StockImgs/stockimg2.png"), ID: "18", Date: "30/7/2024", Type: "Update Log", Title: "Eduventure V2.5 sneak peek", content: "Get a sneak peek at the upcoming Eduventure V2.5 release. This update includes new features and enhancements to improve your experience." },
         { imgPath: require("../../assets/imgs/StockImgs/stockimg1.png"), ID: "17", Date: "25/7/2024", Type: "Community", Title: "Community challenge results", content: "The results are in! Check out the winners of our latest community challenge and see their amazing contributions." },
@@ -24,18 +23,24 @@ function NewsPage(props) {
         { imgPath: require("../../assets/imgs/StockImgs/stockimg2.png"), ID: "1", Date: "12/3/2024", Type: "Event News", Title: "Summer event update and changes", content: "Our summer event has been updated with new activities and changes. Check out the details and join the fun!" },
         { imgPath: require("../../assets/imgs/StockImgs/stockimg3.png"), ID: "2", Date: "7/12/2023", Type: "Update Log", Title: "Eduventure V2.3 changelog", content: "Eduventure V2.3 has been released. Take a look at the changelog for a comprehensive list of updates and improvements." },
         { imgPath: require("../../assets/imgs/StockImgs/stockimg1.png"), ID: "3", Date: "7/12/2023", Type: "Update Log", Title: "Eduventure V2.3 changelog", content: "Eduventure V2.3 has been released. Take a look at the changelog for a comprehensive list of updates and improvements." }
-        ];        
-
-    return(
-        <div className='NewsPageContainer' >
-            <div className='NewsContainerP'>
-            {LatestNews.map((item, index) => (
-                    <NewsPrevItem key={index} item={item} />))}
+    ];
+    const result = NewsCatalog.find(({ ID }) => ID === News_id);
+    return (
+        <div className='NewsItemPageContainer'>
+            <div className='NewsItemContainer'>
+                <div className='NewsItemHeader'>
+                    <img src={result.imgPath} alt="" />
+                    <div className='NewsItemHeaderTextPart'>
+                        <h1>{result.Title}</h1>
+                        <div className='NewsItemDetailsContainer'>
+                            <h3 style={{color:"#FF3399"}}>{result.Type}</h3>
+                            <h3>{result.Date}</h3>
+                        </div>
+                    </div>
+                </div>
+                <p>{result.content}</p>
             </div>
         </div>
-
     )
-
-
 }
-export default NewsPage
+export default NewsItem

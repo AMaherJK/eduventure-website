@@ -85,7 +85,7 @@
 .NewsPreview {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
   font-family: inter_eduventure;
 }
 
@@ -243,4 +243,5 @@
 .SearchShortcuts h2{
   margin:0 0 5px 0;
 }
+
 

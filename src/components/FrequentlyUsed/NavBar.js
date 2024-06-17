@@ -8,12 +8,11 @@ function NavBar(props) {
     const seperator = { height: "90px", width: "10px", backgroundColor: "#FF3399", borderRadius: "10px" }
     return (
         <ul className="NavigationBar">
-            <NavLink to="/"><li><LogoIcon /></li></NavLink>
-            <NavLink to="/About"><li>About</li></NavLink>
-            <NavLink to="/Community"><li>Community</li></NavLink>
-            <NavLink to="/Battle"><li>Battle</li></NavLink>
-            <NavLink to="/Shop"><li>Shop</li></NavLink>
-            <NavLink to="/More"><li>More</li></NavLink>
+            <NavLink to="/"><li className="navbarItem"><LogoIcon /></li></NavLink>
+            <NavLink to="/About"><li className="navbarItem">About</li></NavLink>
+            <NavLink to="/Community"><li className="navbarItem">Community</li></NavLink>
+            <NavLink to="/News"><li className="navbarItem">News</li></NavLink>
+            <NavLink to="/Shop"><li className="navbarItem">Shop</li></NavLink>
 
             <li className="RightsectionNavBar">
                 <SearchIcon />

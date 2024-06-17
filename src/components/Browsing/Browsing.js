@@ -6,6 +6,7 @@ import Community from './Community';
 import Group from './Group';
 import About from './About';
 import NewsPage from './NewsPage';
+import NewsItem from './NewsItem';
 import { Route, Routes } from 'react-router-dom';
 function Browsing(props) {
     var loggedin = true;
@@ -19,6 +20,9 @@ function Browsing(props) {
                 <Route path='/Community' Component={Community} />
                 <Route path='/Group/:id' Component={Group} />
                 <Route path='/News' Component={NewsPage} />
+                <Route path='/Group/:id' Component={Group} />
+                <Route path='/News' Component={NewsPage} />
+                <Route path='/News/:News_id' Component={NewsItem} />
 
             </Routes>
             <Footer loggedin={loggedin} />

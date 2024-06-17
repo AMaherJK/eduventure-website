@@ -72,9 +72,8 @@
     padding: 0;
   }
   a{text-decoration: none;}
-  a:hover{
-    text-shadow: 5px 5px 10px #FF3399,-5px -5px 10px #FF3399;
 
+  .navbarItem:hover{
+    text-shadow: 5px 5px 10px #FF3399,-5px -5px 10px #FF3399;
   }
-  
   
