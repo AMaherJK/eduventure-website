@@ -35,7 +35,21 @@ code {
   align-items: center;
   justify-content: space-between;
 }
-
+.inputFormContainer{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.visualFeedbackInputForm{
+  font-family: inter_eduventure;
+  font-weight: 400;
+  color: #000033;
+  text-align:center;
+  width: 85%;
+}
 .inputForm {
   height: 50px;
   width: 85%;

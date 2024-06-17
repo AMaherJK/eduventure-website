@@ -26,7 +26,7 @@ function SignUpPlate() {
         marginTop: "3rem",
         color: "#000033",
     }
-//#endregion
+    //#endregion
 
     var emailRegex = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/;
     var usernameRegex = /^[0-9A-Za-z-]{6,24}$/;
@@ -169,18 +169,31 @@ function SignUpPlate() {
                         <h3 style={detail}>{detailText}</h3>
                     </div>
                 </div>
-                {(stage === 0) ? <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                {(stage === 0) ?
+                    <div className='inputFormContainer'>
+                        <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                        {(currentInfo === 'inputForm') ? <h4>&nbsp;</h4> : <h4 className='visualFeedbackInputForm'>Please enter a valid email</h4>}
+                    </div>
                     : (stage === 1) ? <input type="date" className={currentInfo} value={form} onChange={handleInput} max="2015-01-31" min="1930-01-31" onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                        : (stage === 2) ? <input type="text" placeholder="Username" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                        : <div style={{ display: "flex", alignItems: "center", width: "85%" }}>
-                                <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
-                                {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
-                                    : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
+                        : (stage === 2) ?
+                            <div className='inputFormContainer'>
+                                <input type="text" placeholder="Username" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                                {(currentInfo === 'inputForm') ? <h4>&nbsp;</h4> : <h4 className='visualFeedbackInputForm'>Please enter a valid username, letters, numbers & dash "-" are accepted</h4>}
+                            </div>
+                            : 
+                            <div className='inputFormContainer'>
+                                <div style={{ display: "flex", alignItems: "center", width: "85%" }}>
+                                    <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
+                                    {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
+                                        : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
+                                    </div>
+                                    {(currentInfo === 'inputForm') ? <h4>&nbsp;</h4> : <h4 className='visualFeedbackInputForm'>Please enter a password that has 8-24 characters, with at least one uppercase letter, one lowercase letter, and one number.</h4>}
+
                             </div>}
             </div>
-            <div style={{ textAlign: "center"}}>
+            <div style={{ textAlign: "center" }}>
                 <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>
-                {(stage === 0)?<Link to="/login"><h4 style={botalt}>already have an account?</h4></Link>:<h4 style={botalt}>&nbsp;</h4>}
+                {(stage === 0) ? <Link to="/login"><h4 style={botalt}>already have an account?</h4></Link> : <h4 style={botalt}>&nbsp;</h4>}
             </div>
         </div >);
 };
