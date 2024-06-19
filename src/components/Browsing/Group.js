@@ -1,43 +1,53 @@
 import './browsing.css'
 import { useParams } from 'react-router-dom'
-import { useState } from 'react';
 import PostPreview from './MiniComponents/Community Stuff/PostPreview';
 function Group(props) {
-    const { Group_id } = useParams();
-
-    var Post1 = { Title: "Trying a post type", Author: "Mahmoud Ali", Type: "Announcement", Date: "24/5/2024", CommentCounter: "5", contents: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis faucibus nisl. Mauris gravida volutpat justo ac mollis. Vivamus eget velit ac ex gravida cursus id ac odio. Cras posuere nec eros vel dapibus. Nulla vestibulum felis id sollicitudin auctor. Quisque euismod sit amet nulla in porta. Ut eget nisi non est fermentum finibus. Etiam hendrerit nisi et turpis ullamcorper, et faucibus enim porttitor. Praesent vitae lacus vel metus suscipit tempus a non magna. Fusce nisi turpis, faucibus ut tristique a, eleifend sit amet mi. Vivamus malesuada diam eros, sit amet hendrerit enim sollicitudin nec. Sed vel lectus eleifend, dictum dui quis, vulputate sapien. Curabitur faucibus laoreet magna ac sollicitudin. Morbi vel rhoncus nisl. Maecenas tempor lobortis ligula ac faucibus. Nulla ut elementum libero. Phasellus at rhoncus metus, quis tincidunt tellus. Sed quis purus lectus. Quisque ac tristique quam. Aenean non ligula sagittis, varius diam at, venenatis tortor. Etiam sed enim nisl. Etiam malesuada nulla a tristique interdum. Quisque quis nisi lorem. Quisque lobortis lorem sit amet turpis eleifend, vel pulvinar nisi elementum. Nulla vel nulla eu libero bibendum gravida id eget nisl. Sed sed justo laoreet, interdum odio eu, pellentesque nulla. Sed eu vehicula augue. Nunc velit diam, feugiat eu augue sit amet, commodo convallis odio. Donec imperdiet sem metus, sed aliquam lectus pharetra in. Suspendisse id lacinia enim. Fusce non ante ut enim ultricies elementum vitae et dolor. Suspendisse mauris tortor, iaculis non ligula ac, mollis sollicitudin augue. Fusce varius non dolor id egestas. Pellentesque vestibulum accumsan magna, ornare laoreet dolor egestas vitae. Nullam quam libero, lacinia sed imperdiet ut, tempor ut quam. Integer vitae dapibus augue. Nam eget iaculis velit. Vestibulum arcu ante, elementum sit amet ante in, tristique mattis ante. Nullam vel aliquam erat, quis auctor augue. Phasellus accumsan rutrum massa. Cras elementum libero ex, vestibulum gravida mauris pretium in. Fusce tortor sem, consectetur ut ante ac, blandit suscipit risus. Sed lobortis euismod ligula blandit vulputate. Maecenas sapien enim, convallis convallis tortor ac, ultrices gravida velit. Ut a libero porttitor, convallis libero nec, aliquam dui. Pellentesque a hendrerit leo. Integer convallis massa id mattis efficitur. Mauris id condimentum mi. In luctus, magna ut laoreet dignissim, augue lacus scelerisque dolor, non dapibus elit est eget augue. Nunc vestibulum mi interdum nunc bibendum ullamcorper. Vivamus a nulla sodales, auctor lacus eget, condimentum metus. Integer a odio arcu. Nam id est ac ligula porta rutrum a non nisi. Nunc at eros ac metus vestibulum scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur dolor nulla, porttitor eu porta vel, faucibus eu urna. Donec at iaculis purus. " }
-    var comments1 = [
-        { User: "Ahmed Maher", cDate: "2024-04-23T19:03:34Z", CommentContent: "This is beautiful! Exciting news!" },
-        { User: "Sara Ali", cDate: "2024-04-24T10:15:45Z", CommentContent: "Great job, everyone!" },
-        { User: "John Doe", cDate: "2024-04-25T14:30:21Z", CommentContent: "Can't wait to see what's next." },
-        { User: "Emily Smith", cDate: "2024-04-26T08:45:50Z", CommentContent: "Impressive work, team!" },
-        { User: "Michael Brown", cDate: "2024-04-27T12:00:00Z", CommentContent: "This is a game-changer." },
-        { User: "Jessica Lee", cDate: "2024-04-28T09:22:33Z", CommentContent: "Fantastic effort by all involved!" },
-        { User: "David Wilson", cDate: "2024-04-29T16:47:11Z", CommentContent: "This is going to be huge!" },
-        { User: "Sophia Martinez", cDate: "2024-04-30T11:35:27Z", CommentContent: "Absolutely love this!" },
-        { User: "James Taylor", cDate: "2024-05-01T13:14:56Z", CommentContent: "Remarkable achievement." },
-        { User: "Linda Anderson", cDate: "2024-05-02T17:29:43Z", CommentContent: "This news made my day!" }];
-
-
+    const { group_id } = useParams();
+    var GroupCatalog = [
+        {
+            GroupName: "The EC Community", GroupMembersCount: "12", imgPath: require("../../assets/imgs/Decoratives/GroupImgs/1.png"), GroupID: "1", groupDesc:"The EC Community is a vibrant, inclusive network of individuals committed to fostering innovation, collaboration, and growth. Our mission is to empower members through shared knowledge, resources, and support, enabling each person to achieve their personal and professional goals. We host regular events, workshops, and networking opportunities designed to inspire and connect like-minded individuals. Whether you're an entrepreneur, creative professional, or simply passionate about personal development, The EC Community welcomes you to join us in creating a brighter future together.",
+            Posts: [{ Title: "Upcoming Office", Author: "Mahmoud Ali", Type: "Announcement", Date: "24/5/2024", contents: "We are excited to announce the renovation of our main office starting next month.", Comments: [{ User: "Linda Anderson", cDate: "2024-05-02T17:29:43Z", CommentContent: "Looking forward to the new office look!" }, { User: "John Doe", cDate: "2024-05-03T12:14:30Z", CommentContent: "Hope it won’t disrupt our workflow too much." }] }]
+        },
+        {
+            GroupName: "HH Society", GroupMembersCount: "4", imgPath: require("../../assets/imgs/Decoratives/GroupImgs/2.png"), GroupID: "2", groupDesc:"The HH Society, short for Harbour Horizon Society, is a prestigious organization dedicated to the appreciation and preservation of maritime heritage and contemporary marine culture. Our members include maritime enthusiasts, historians, sailors, and environmentalists who are passionate about the sea and its many facets. We organize educational programs, coastal cleanups, sailing expeditions, and social gatherings that celebrate our shared love for the ocean. Join the HH Society to connect with fellow sea lovers and contribute to meaningful maritime initiatives.",
+            Posts: [
+                { Title: "Quarterly Meeting Scheduled", Author: "Susan Lee", Type: "Reminder", Date: "20/5/2024", contents: "Don't forget our quarterly meeting on June 1st.", Comments: [{ User: "Anna Smith", cDate: "2024-05-20T09:13:21Z", CommentContent: "I'll be there. Thanks for the reminder." }, { User: "Michael Brown", cDate: "2024-05-21T10:45:37Z", CommentContent: "Is there an agenda for the meeting?" }] },
+                { Title: "New Cafeteria Menu", Author: "Jason King", Type: "Update", Date: "22/5/2024", contents: "Check out our new and improved cafeteria menu starting next week!", Comments: [{ User: "Sarah Davis", cDate: "2024-05-22T15:27:53Z", CommentContent: "Excited to try the new dishes!" }, { User: "Mark Johnson", cDate: "2024-05-23T08:30:45Z", CommentContent: "Hope there are more vegetarian options." }] }
+            ]
+        },
+        {
+            GroupName: "Igor Clan", GroupMembersCount: "5", imgPath: require("../../assets/imgs/Decoratives/GroupImgs/3.png"), GroupID: "3", groupDesc:"Igor is a dynamic collective of creative thinkers, artists, and innovators united by a shared passion for pushing the boundaries of art and technology. We believe in the power of collaboration and the magic that happens when diverse minds come together to create something extraordinary. Igor hosts regular exhibitions, hackathons, workshops, and community projects aimed at inspiring creativity and fostering a spirit of experimentation. Whether you're an artist, coder, designer, or simply someone with a creative spark, Igor is the place for you to thrive and make an impact.",
+            Posts: [
+                { Title: "IT System Maintenance", Author: "Mahmoud Ali", Type: "Announcement", Date: "24/5/2024", contents: "Scheduled maintenance on our IT systems this weekend.", Comments: [{ User: "Linda Anderson", cDate: "2024-05-24T10:29:43Z", CommentContent: "Thanks for the heads-up!" }, { User: "James Blake", cDate: "2024-05-24T11:15:30Z", CommentContent: "Will the email service be affected?" }] },
+                { Title: "Holiday Schedule", Author: "Sandra Kim", Type: "Notice", Date: "23/5/2024", contents: "Here are the office hours for the upcoming holiday season.", Comments: [{ User: "Tom Harris", cDate: "2024-05-23T09:13:21Z", CommentContent: "Got it. Planning my leave accordingly." }, { User: "Alice Moore", cDate: "2024-05-23T10:45:37Z", CommentContent: "Thanks for the update." }] },
+                { Title: "New Health Benefits", Author: "John Parker", Type: "Update", Date: "22/5/2024", contents: "We have updated our health benefits package.", Comments: [{ User: "Sarah Davis", cDate: "2024-05-22T15:27:53Z", CommentContent: "Great news, thank you!" }, { User: "Jack Wilson", cDate: "2024-05-22T16:30:45Z", CommentContent: "Where can I find more details?" }] }
+            ]
+        },
+        {
+            GroupName: "JJ House", GroupMembersCount: "3", imgPath: require("../../assets/imgs/Decoratives/GroupImgs/4.png"), GroupID: "4", groupDesc:"The J Jonah Jameson House is a unique literary and media club inspired by the legendary journalist's relentless pursuit of the truth. Our group is composed of writers, journalists, media professionals, and enthusiasts who are passionate about storytelling, investigative journalism, and media ethics. We provide a platform for members to share their work, discuss industry trends, and collaborate on projects that uphold the highest standards of journalism. Through workshops, panel discussions, and networking events, the J Jonah Jameson House fosters a community dedicated to excellence in media and the power of the written word.",
+            Posts: [
+                { Title: "New Project Launch", Author: "Mahmoud Ali", Type: "Announcement", Date: "24/5/2024", contents: "Excited to announce the launch of our new project.", Comments: [{ User: "Linda Anderson", cDate: "2024-05-24T10:29:43Z", CommentContent: "Can’t wait to get started!" }, { User: "John Doe", cDate: "2024-05-24T11:15:30Z", CommentContent: "When can we see the project details?" }] },
+                { Title: "Office Cleaning Schedule", Author: "Susan Lee", Type: "Reminder", Date: "23/5/2024", contents: "Reminder: Office cleaning is scheduled for this weekend.", Comments: [{ User: "Anna Smith", cDate: "2024-05-23T09:13:21Z", CommentContent: "Thanks for the reminder." }, { User: "Michael Brown", cDate: "2024-05-23T10:45:37Z", CommentContent: "Will our workstations be affected?" }] },
+                { Title: "Website Redesign", Author: "Jason King", Type: "Update", Date: "22/5/2024", contents: "We are redesigning our website to improve user experience.", Comments: [{ User: "Sarah Davis", cDate: "2024-05-22T15:27:53Z", CommentContent: "Looking forward to the new design!" }, { User: "Mark Johnson", cDate: "2024-05-22T16:30:45Z", CommentContent: "Hope it’s more mobile-friendly." }] },
+                { Title: "Annual General Meeting", Author: "Rachel Green", Type: "Event", Date: "21/5/2024", contents: "Our AGM is scheduled for June 15th.", Comments: [{ User: "Emily White", cDate: "2024-05-21T11:24:19Z", CommentContent: "Noted. I’ll be there." }, { User: "Chris Evans", cDate: "2024-05-21T14:32:50Z", CommentContent: "Will there be an option to join virtually?" }] },
+                { Title: "Employee Recognition Program", Author: "Jason King", Type: "Update", Date: "20/5/2024", contents: "We are launching a new employee recognition program.", Comments: [{ User: "Sarah Davis", cDate: "2024-05-20T15:27:53Z", CommentContent: "Great initiative!" }, { User: "Mark Johnson", cDate: "2024-05-20T16:30:45Z", CommentContent: "How can we nominate colleagues?" }] }
+            ]
+        }
+    ];
+    var result = GroupCatalog.find(({ GroupID }) => GroupID === group_id);
     return (
         <div className='GroupPageContainer'>
             <div className='GroupInfoSidebar'>
-                <img src={require('../../assets/imgs/Decoratives/GroupImgs/1.png')} alt='' />
-                <h1 className='GroupNameTitle'>Group Name</h1>
-                <p className='GroupDescParagraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut commodo ipsum. Sed consectetur volutpat rhoncus. Curabitur varius neque metus, sed iaculis lectus sagittis nec. Cras tincidunt tincidunt risus, vitae vestibulum arcu feugiat quis. In commodo sollicitudin dolor ultricies tristique. </p>
-                <h2>14 Members</h2>
-                <h2>3 posts</h2>
+                <img src={result.imgPath} alt='' />
+                <h1 className='GroupNameTitle'>{result.GroupName}</h1>
+                <p className='GroupDescParagraph'>{result.groupDesc}</p>
+                <h2>{result.GroupMembersCount} Members</h2>
+                <h2>{result.Posts.length} posts</h2>
             </div>
             <div className='GroupPostContainer'>
-            <PostPreview Data={Post1} Comments={comments1} />
-            <PostPreview Data={Post1} Comments={comments1} />
-            <PostPreview Data={Post1} Comments={comments1} />
-            <PostPreview Data={Post1} Comments={comments1} />
-            <PostPreview Data={Post1} Comments={comments1} />
-            <PostPreview Data={Post1} Comments={comments1} />
-            <PostPreview Data={Post1} Comments={comments1} />
+                {result.Posts.map((post, index) => (
+                    <PostPreview key={index} Data={post} Comments={post.Comments} />))}
             </div>
-
         </div>
     )
 }

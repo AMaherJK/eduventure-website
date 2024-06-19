@@ -18,9 +18,7 @@ function Browsing(props) {
                 <Route path='/' Component={Landing} />
                 <Route path='/About' Component={About} />
                 <Route path='/Community' Component={Community} />
-                <Route path='/Group/:id' Component={Group} />
-                <Route path='/News' Component={NewsPage} />
-                <Route path='/Group/:id' Component={Group} />
+                <Route path='/Group/:group_id' Component={Group} />
                 <Route path='/News' Component={NewsPage} />
                 <Route path='/News/:News_id' Component={NewsItem} />
 
