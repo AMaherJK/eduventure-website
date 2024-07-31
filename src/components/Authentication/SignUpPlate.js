@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Stage from './Decoratives/SignUpPlateStage'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+import Loader from './Loader';
 function SignUpPlate() {
     //#region some local style
     const head = {
@@ -38,6 +39,16 @@ function SignUpPlate() {
     const [detailText, setdetailText] = useState("used to sign in.")
     const [userData, setUserData] = useState({ Email: "", bDay: "", username: "", password: "" })
     const [passwordVis, setpasswordVis] = useState("password")
+
+    const navigate = useNavigate();
+    const [Loading, setLoading] = useState(false)
+    useEffect(() => {
+        if(Loading){
+        setTimeout(() => {
+            setLoading(false)
+            navigate("/");
+        }, 2000);}
+    },);
 
     const handleInput = (e) => {
         e.preventDefault();
@@ -108,6 +119,7 @@ function SignUpPlate() {
                 ...userData,
                 password: form
             })
+            setLoading(true)
             advanceStage()
         }
         else {         //missing proper visual feedback
@@ -160,6 +172,10 @@ function SignUpPlate() {
 
 
     return (
+        <>
+        {(Loading)?<Loader/>:
+        
+
         <div className="platebox">
             <div style={{ width: "100%", alignItems: "center", display: "flex", flexDirection: "column" }}>
                 <div style={{ paddingTop: "3rem" }}>
@@ -195,6 +211,6 @@ function SignUpPlate() {
                 <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>
                 {(stage === 0) ? <Link to="/login"><h4 style={botalt}>already have an account?</h4></Link> : <h4 style={botalt}>&nbsp;</h4>}
             </div>
-        </div >);
+        </div >}</>);
 };
 export default SignUpPlate;

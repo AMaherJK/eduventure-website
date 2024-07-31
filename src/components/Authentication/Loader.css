@@ -1,0 +1,30 @@
+.LoaderContainer{
+    width: 100%;
+    height: 100%;
+    background-color: #000033;
+    color: #FF3399;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Kufam_eduventure;
+    text-transform: uppercase;
+}
+.hold{
+    text-shadow: 3px 3px 0 #fff;
+}
+.logoimgloading{
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-40px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

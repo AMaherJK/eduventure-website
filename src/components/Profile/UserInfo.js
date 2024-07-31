@@ -5,9 +5,9 @@ function UserInfo(props) {
     var userName = props.info.name
     var userTag = props.info.tag
     var userID = props.info.uID
-    var userLevel = 23
-    var xp=300
-    var Levelxp=700
+    var userLevel = props.info.Level
+    var xp=props.info.xp
+    var Levelxp=1000
     var levelCompletion=xp/Levelxp
     //#endregion
     return (
@@ -17,7 +17,7 @@ function UserInfo(props) {
                 <h1 className='userNameStyle'>{userName}</h1>
                 <h1 className='userTagStyle'>{userTag}</h1>
                 <h1 className='userIDStyle'>{userID}</h1>
-                <p className='userDescriptionStyle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor cursus felis non bibendum. In tristique, augue mattis euismod pulvinar, orci ligula semper ipsum, sed mollis dolor odio vel nunc. Proin et ipsum at nisi venenatis placerat. Cras id aliquet urna. Integer varius, justo eget rhoncus maximus, lacus felis hendrerit.</p>
+                <p className='userDescriptionStyle'>{props.info.desc}</p>
                 <div className='bottomsectionStyle'>
                     <h1 className='userLevelStyle'>Level {userLevel}</h1>
                     <div className='progressBar' style={{'--width':levelCompletion}} />

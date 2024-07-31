@@ -1,6 +1,7 @@
 import './browsing.css'
 import { useParams } from 'react-router-dom'
 import PostPreview from './MiniComponents/Community Stuff/PostPreview';
+import { fetchGroup } from '../../Fetch';
 function Group(props) {
     const { group_id } = useParams();
     var GroupCatalog = [
@@ -35,6 +36,8 @@ function Group(props) {
         }
     ];
     var result = GroupCatalog.find(({ GroupID }) => GroupID === group_id);
+    console.log(fetchGroup())
+
     return (
         <div className='GroupPageContainer'>
             <div className='GroupInfoSidebar'>

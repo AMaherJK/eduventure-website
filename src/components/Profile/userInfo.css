@@ -29,6 +29,8 @@
     color: #FFFFFF;
     font-size: 0.694vw;
     font-weight: 400;
+    height: 40%;
+    width: 752px;
 }
 .userLevelStyle {
     font-family: "Inter_eduventure";

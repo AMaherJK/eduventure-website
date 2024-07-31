@@ -48,7 +48,7 @@ function EditableTab(props) {
                             <h2 className='titleText'>Title</h2>
                             <div className='titleUnderline' />
                         </div>
-                        <input className='inputBox' type='text' value="placeholder for dropdown" style={{ margin: "2% 0 0 0" }} />
+                        <input className='inputBox' type='text' value="Speed Demon" style={{ margin: "2% 0 0 0" }} />
                         <div className='Title_n_seperator'>
                             <h2 className='titleText'>About me</h2>
                             <div className='titleUnderline' />
@@ -83,7 +83,7 @@ function EditableTab(props) {
                         <div className='theme-item'><div onClick={() => setActiveTheme(4)} className={activeTheme===4? 'theme theme5 activeTheme':'theme theme5'}/><h4>Ignition</h4></div>
                         <div className='theme-item'><div onClick={() => setActiveTheme(5)} className={activeTheme===5? 'theme theme6 activeTheme':'theme theme6'}/><h4>Floral</h4></div>
                     </div>
-                    <button className='UploadBtn'>Try it out!</button>
+                    <button className='UploadBtn' onClick={{}}>Try it out!</button>
                 </div>
             )
     }

@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, } from 'react';
 import Stage from './Decoratives/LogInPlateStage'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Loader from './Loader';
 function LogInPlate() {
     //#region some local style
     const head = {
@@ -16,7 +18,7 @@ function LogInPlate() {
         textTransform: "lowercase",
         fontSize: "18pt",
         color: "#000033",
-        textAlign:"center"
+        textAlign: "center"
 
     }
     const botalt = {
@@ -40,7 +42,15 @@ function LogInPlate() {
     const [detailText, setdetailText] = useState("used to sign in.")
     const [userData, setUserData] = useState({ Email: "", password: "" })
     const [passwordVis, setpasswordVis] = useState("password")
-
+    const navigate = useNavigate();
+    const [Loading, setLoading] = useState(false)
+    useEffect(() => {
+        if(Loading){
+        setTimeout(() => {
+            setLoading(false)
+            navigate("/");
+        }, 2000);}
+    },);
     const handleInput = (e) => {
         e.preventDefault();
         formthing(e.target.value)
@@ -78,6 +88,7 @@ function LogInPlate() {
                 ...userData,
                 password: form
             })
+            setLoading(true)
             advanceStage()
         }
         else {         //missing proper visual feedback
@@ -120,7 +131,8 @@ function LogInPlate() {
         console.log(PasswordModalState)
     }
 
-    return (
+    return (<>
+        {(Loading)?<Loader/>:
         <div className="platebox">
             <div style={{ width: "100%", alignItems: "center", display: "flex", flexDirection: "column" }}>
                 <div style={{ paddingTop: "3rem" }}>
@@ -132,20 +144,22 @@ function LogInPlate() {
                 </div>
                 {(stage === 0) ? <input type="text" placeholder="eduventure@example.com" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
                     :
-                    <div style={{ display: "flex", flexDirection: "column", width:"100%", alignItems:"center"}}>
+                    <div style={{ display: "flex", flexDirection: "column", width: "100%", alignItems: "center" }}>
                         <div style={{ display: "flex", alignItems: "center", width: "85%" }}>
                             <input type={passwordVis} placeholder="Password" className={currentInfo} value={form} onChange={handleInput} onKeyDown={(e) => { if (e.key === "Enter") handleClick() }} />
                             {(passwordVis === "password") ? <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/ShowPassword.png')} onClick={setpasswordVis_click} alt='show password' />
                                 : <img style={{ zIndex: "1", cursor: "pointer" }} src={require('../../assets/imgs/icons/HidePassword.png')} onClick={setpasswordVis_click} alt='hide password' />}
                         </div>
-                        {(PasswordModalState)?<h4 className='visualFeedbackInputForm'>We have sent an email to <span style={{color:"#ff3399"}}>{userData.Email}</span>, check it to reset your password</h4>:<></>}
+                        {(PasswordModalState) ? <h4 className='visualFeedbackInputForm'>We have sent an email to <span style={{ color: "#ff3399" }}>{userData.Email}</span>, check it to reset your password</h4> : <></>}
 
                     </div>}
             </div>
             <div style={{ textAlign: "center", justifySelf: "end" }}>
-                <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>
+                {(stage === 0) ? <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button> :
+                <button className="proceedbtn" onClick={handleClick}><img src={require('../../assets/imgs/icons/Arrow.png')} alt={"→"} /></button>}
                 {(stage === 0) ? <Link to="/signup"><h4 style={botalt}>Don't have an account?</h4></Link> : <h4 style={botalt} onClick={ToggleForgotPasswordModal}>Forgot your password?</h4>}
             </div>
-        </div >);
+        </div >
+    }</>);
 }
 export default LogInPlate

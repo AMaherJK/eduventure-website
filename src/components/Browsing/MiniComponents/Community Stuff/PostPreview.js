@@ -42,7 +42,6 @@ function PostPreview(props) {
                             <div className="Comment" key={index}>
                                 <div className='T'>
                                     <div className='T2'>
-                                        <img src={require("../../../../assets/imgs/StockImgs/stockimg1.jpg")} alt="User" />
                                         <a>{comment.User}</a>
                                     </div>
                                     <h4>15h</h4>

@@ -151,12 +151,29 @@ code {
   background-color: #000033;
   border-radius: 20px;
   transition: all 100ms ease-in-out;
+  position: relative;
 }
 
 .SettingsBtn:hover {
   background-color: #FF3399;
 }
-
+.dropdownSetting{
+  width: 90px;
+  height: fit-content;
+  font-size: 10pt;
+  position: absolute;
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  margin-top: 11rem;
+  margin-left: 23.5rem;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #000033;
+}
+.itemdds:hover{
+  background-color: #b4b4b4;
+}
 .profilePicNavBarcontainer {
   width: 90px;
   height: 90px;
